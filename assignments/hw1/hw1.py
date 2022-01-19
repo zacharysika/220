@@ -2,7 +2,8 @@
 Name: Zachary Sika
 hw1.py
 
-Problem: It calculates several different prices, areas, volumes, and kilometers quickly and effectively
+Problem: It calculates several different prices, areas, volumes,
+and kilometers quickly and effectively
 through user input.
 
 Certification of Authenticity:
@@ -17,30 +18,31 @@ def calc_rec_area():
     print("Area =", area)
 
 def calc_volume():
-    length = int(input('What is the length?:'))
-    width = int(input('What is the width?:'))
-    height = int(input('What is the height?:'))
+    length = eval(input('What is the length?:'))
+    width = eval(input('What is the width?:'))
+    height = eval(input('What is the height?:'))
     volume = length * width * height
     print("The volume is", volume)
 
 def shooting_percentage():
-    shots = int(input('How many shots did you take?:'))
-    success = int(input('How many shots did you hit the target with?:'))
-    percent = success / shots
-    print ('The total percent of shots made is', percent)
+    shots = eval(input('How many shots did you take?:'))
+    success = eval(input('How many shots did you hit the target with?:'))
+    total = (success / shots) * 100
+    print ('The total percent of shots made is', total)
 
 
 
 def coffee():
-    cost = 0.86
-    coffee = int(input('How much coffee would you like?'))
-    total = coffee * cost
-    print ("Your total for the coffee is: " + total)
-
+    amount = eval(input('How many pounds of coffee would you like?'))
+    shippingpp = 0.86
+    order = 1.50
+    coffeepp = 10.50
+    total = (coffeepp + shippingpp) * amount + order
+    print ("Your total for the coffee is: " , total)
 
 def kilometers_to_miles():
     conversion = 1.61
-    kilometers = int(input('How many kilometers did you travel?'))
+    kilometers = eval(input('How many kilometers did you travel?'))
     miles = kilometers / conversion
     print ("The total number of miles is:", miles)
 
@@ -49,4 +51,3 @@ def kilometers_to_miles():
 
 if __name__ == '__main__':
     pass
-
