@@ -12,11 +12,12 @@ I certify that this assignment is my own work, but I discussed it with: <Name(s)
 
 
 def calc_rec_area():
-    pass
-
+    length = eval(input("Enter the length: "))
+    width = eval(input("Enter the width: "))
+    area = length * width
+    print("Area =", area)
 
 def calc_volume():
-    pass
 
 
 def shooting_percentage():
