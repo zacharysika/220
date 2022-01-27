@@ -23,3 +23,4 @@ def means():
     print(geometric_mean)
     print(harmonic_mean)
     print(rms_mean)
+s
