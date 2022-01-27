@@ -20,6 +20,8 @@ def means():
     harmonic_mean = value_amount / harmonic_acc
     geometric_mean = geo_acc ** (1/value_amount)
 
-    print("Your Root Mean Square (RMS) is: ") + rms_mean
-    print("Your Harmonic Mean is: ") + harmonic_mean
-    print("Your Geometric Mean is: ") + geometric_mean
+    print("Your Root Mean Square (RMS) is: ", rms_mean)
+    print("Your Harmonic Mean is: ", harmonic_mean)
+    print("Your Geometric Mean is: ", geometric_mean)
+
+means()
