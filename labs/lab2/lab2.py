@@ -1,8 +1,9 @@
 """
-Zachary Sika
+Name: Zachary Sika
 lab2.py
-To calculate the RMS, the harmonic mean, and the geometric mean
-I have created this with the help of Ms. Callahart
+Problem: To calculate the RMS, the harmonic mean, and the geometric mean
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.
 """
 
 def means():
