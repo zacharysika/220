@@ -25,4 +25,3 @@ def means():
     print("Your Harmonic Mean is: ", harmonic_mean)
     print("Your Geometric Mean is: ", geometric_mean)
 
-means()
