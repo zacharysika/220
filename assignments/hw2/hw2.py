@@ -1,36 +1,48 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Zachary Sika
+hw2.py
 
 Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 import math
 
 
 def sum_of_threes():
-    pass
+    upper_bound = eval(input("What is the upper bound?"))
+    lower_bound = eval(input("What is the lower bound?"))
+
 
 
 def multiplication_table():
     pass
 
-
 def triangle_area():
-    pass
+    a_variable = eval(input("Enter side a length"))
+    b_variable = eval(input("Enter side b length"))
+    c_variable = eval(input("Enter side c length"))
+    s_variable = (a_variable + b_variable + c_variable)/2
+    area = math.sqrt(s_variable*(s_variable-a_variable)*(s_variable-b_variable)*(s_variable-c_variable))
+    print (area)
 
 
 def sum_squares():
-    pass
-
+    sum = 1
+    lower_range = eval(input("Enter lower range: "))
+    upper_range = eval(input("Enter upper range: "))
+    for i in range(lower_range, upper_range):
+        sum = sum * i
+    print(sum)
 
 def power():
-    pass
-
+    sum = 1
+    base = eval(input("Enter base:"))
+    exponent = eval(input("Enter exponent"))
+    for i in range (exponent):
+        sum = sum * base
+    print(base, "^", exponent, "=", sum)
 
 if __name__ == '__main__':
     pass
