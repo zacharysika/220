@@ -2,7 +2,7 @@
 Name: Zachary Sika
 hw2.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: Solves problems of arithmetic through python from user input.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
@@ -11,13 +11,12 @@ import math
 
 
 def sum_of_threes():
-    upper_bound = eval(input("What is the upper bound?"))
-    lower_bound = eval(input("What is the lower bound?"))
-
-
-
-def multiplication_table():
     pass
+def multiplication_table():
+    num = 1
+    for i in range(1,11):
+        sum = (num*i)+sum
+    print(sum)
 
 def triangle_area():
     a_variable = eval(input("Enter side a length"))
@@ -29,13 +28,12 @@ def triangle_area():
 
 
 def sum_squares():
-    sum = 1
+    sum = 0
     lower_range = eval(input("Enter lower range: "))
     upper_range = eval(input("Enter upper range: "))
-    for i in range(lower_range, upper_range):
-        sum = sum * i
+    for i in range(lower_range,upper_range + 1):
+        sum= (i*i) + sum
     print(sum)
-
 def power():
     sum = 1
     base = eval(input("Enter base:"))
