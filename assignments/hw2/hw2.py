@@ -23,7 +23,8 @@ def triangle_area():
     b_variable = eval(input("Enter side b length"))
     c_variable = eval(input("Enter side c length"))
     s_variable = (a_variable + b_variable + c_variable)/2
-    area = math.sqrt(s_variable*(s_variable-a_variable)*(s_variable-b_variable)*(s_variable-c_variable))
+    area = math.sqrt(s_variable*(s_variable-a_variable)*
+           (s_variable-b_variable)*(s_variable-c_variable))
     print (area)
 
 
