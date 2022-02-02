@@ -12,6 +12,7 @@ import math
 
 def sum_of_threes():
     pass
+
 def multiplication_table():
     num = 1
     for i in range(1,11):
