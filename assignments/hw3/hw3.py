@@ -26,7 +26,6 @@ def tip_jar():
         tips = eval(input("how much would you like to donate?")) + tips
     print(tips)
 
-
 def newton():
     approx = eval(input("What number do you want to square root?"))
     x = eval(input("How many times should we improve the approximation?"))
