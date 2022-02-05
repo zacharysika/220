@@ -1,26 +1,38 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Zachary Sika
+hw3.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: Creates average for tips, grades, and give the square root of a number using
+newton's method.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 
 
 def average():
-    pass
+    grade_total = 0
+    grades = eval(input("how many grades will you enter?"))
+    for i in range(grades):
+        grade_total = eval(input("Enter grade")) + grade_total
+    average = grade_total / grades
+    print(average)
 
 
 def tip_jar():
-    pass
+    passing_amount = 5
+    tips = 0
+    for i in range(passing_amount):
+        tips = eval(input("how much would you like to donate?")) + tips
+    print(tips)
 
 
 def newton():
-    pass
+    approx = eval(input("What number do you want to square root?"))
+    x = eval(input("How many times should we improve the approximation?"))
+    approx_total = (approx + (x/approx)) / 2
+    print(approx_total)
+
 
 
 def sequence():
