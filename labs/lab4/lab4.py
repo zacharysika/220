@@ -26,7 +26,6 @@ def greeting_card():
     polygon.draw(win)
     message.draw(win)
     arrow.draw(win)
-    time.sleep(1)
     win.getMouse()
 
 
