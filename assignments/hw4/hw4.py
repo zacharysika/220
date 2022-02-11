@@ -1,13 +1,11 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Zachary Sika
+hw4.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: Creates a interactable graphical interface from python.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 
 from graphics import *
@@ -28,7 +26,8 @@ def squares():
     instructions.draw(win)
 
     # builds a circle
-    shape = Circle(Point(50, 50), 20)
+    shape = Rectangle(Point(50, 50), Point(50,50))
+    shape.setWidth(50)
     shape.setOutline("red")
     shape.setFill("red")
     shape.draw(win)
@@ -42,18 +41,30 @@ def squares():
         # point where the user clicked
         change_x = click.getX() - center.getX()
         change_y = click.getY() - center.getY()
+        clone = shape.clone()
+        clone.draw(win)
         shape.move(change_x, change_y)
-
+    message = Text(Point(175,125), "Click again to close")
+    message.draw(win)
     win.getMouse()
     win.close()
 
-
 def rectangle():
-    pass
-
+    width = 400
+    height = 400
+    win = GraphWin("Rectangle", width, height)
+    point1 = click.getX()
+    point2 = click.getY()
+    shape = Rectangle(Point(point1), Point(point2))
+    shape.draw(win)
+    message = Text(Point(175,125), "Click again to close")
+    message.draw(win)
+    win.getMouse()
+    win.close()
+rectangle()
 
 def circle():
-    pass
+
 
 
 def pi2():
