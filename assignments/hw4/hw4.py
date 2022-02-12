@@ -58,17 +58,17 @@ def rectangle():
     corner_2 = shape.getP1()
     length = corner_1.getX()
     width = corner_2.getY()
-    area = length * width
-    perimeter = area ** 2
-    area_text_header = Text(Point(150,50), "The area is:")
-    area_text_content = Text(Point(150,100), (area))
+    perimeter = length * width
+    area = perimeter ** 2
     perimeter_text_header = Text(Point(150,200),"The perimeter is:")
     perimeter_text_content = Text(Point(150,250), (perimeter))
+    area_text_header = Text(Point(150, 50), "The area is:")
+    area_text_content = Text(Point(150, 100), (area))
     shape.draw(win)
-    area_text_header.draw(win)
-    area_text_content.draw(win)
     perimeter_text_header.draw(win)
     perimeter_text_content.draw(win)
+    area_text_header.draw(win)
+    area_text_content.draw(win)
     message = Text(Point(175,125), "Click again to close")
     message.draw(win)
     win.getMouse()
