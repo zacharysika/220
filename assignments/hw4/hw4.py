@@ -10,7 +10,6 @@ I certify that this assignment is entirely my own work.
 
 from graphics import *
 
-
 def squares():
     # Creates a graphical window
     width = 400
@@ -53,10 +52,21 @@ def rectangle():
     width = 400
     height = 400
     win = GraphWin("Rectangle", width, height)
-    point1 = click.getX()
-    point2 = click.getY()
-    shape = Rectangle(Point(point1), Point(point2))
+    shape = Rectangle(win.getMouse(),win.getMouse())
+    shape.setFill("green")
+    corner_click1 = (shape.getP1())
+    corner_click2 = (shape.getP2())
+    area = eval(corner_click1*corner_click2)
+    perimeter = area * 2
+    area_text_header = Text(Point(150,50), "The area is:")
+    area_text_content = Text(Point(150,100), (area))
+    perimeter_text_header = Text(Point(150,200),"The perimeter is:")
+    perimeter_text_content = Text(Point(150,250), (perimeter))
     shape.draw(win)
+    area_text_header.draw(win)
+    area_text_content.draw(win)
+    perimeter_text_header.draw(win)
+    perimeter_text_content.draw(win)
     message = Text(Point(175,125), "Click again to close")
     message.draw(win)
     win.getMouse()
@@ -64,7 +74,7 @@ def rectangle():
 rectangle()
 
 def circle():
-
+    pass
 
 
 def pi2():
