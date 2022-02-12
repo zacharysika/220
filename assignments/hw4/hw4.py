@@ -54,10 +54,12 @@ def rectangle():
     win = GraphWin("Rectangle", width, height)
     shape = Rectangle(win.getMouse(),win.getMouse())
     shape.setFill("green")
-    corner_click1 = (shape.getP1())
-    corner_click2 = (shape.getP2())
-    area = eval(corner_click1*corner_click2)
-    perimeter = area * 2
+    corner_1 = shape.getP1()
+    corner_2 = shape.getP1()
+    length = corner_1.getX()
+    width = corner_2.getY()
+    area = length * width
+    perimeter = area ** 2
     area_text_header = Text(Point(150,50), "The area is:")
     area_text_content = Text(Point(150,100), (area))
     perimeter_text_header = Text(Point(150,200),"The perimeter is:")
