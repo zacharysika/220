@@ -1,27 +1,29 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Zachary Sika
+hw5.py
 
 Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 
 
 def name_reverse():
-    pass
-
-
+    name_entry = input("enter a name(first last):")
+    name = name_entry.split(" ")
+    print(name[1],name[0])
+name_reverse()
 def company_name():
-    pass
-
-
+    domain = []
 def initials():
-    pass
-
+    abbreviation = []
+    roll_over = 0
+    student_count = eval(input("how many students are in the class?"))
+    for i in range(student_count):
+        roll_over = roll_over + 1
+        student = input("What is the name of student")
+        student[abbreviation]
 
 def names():
     pass
