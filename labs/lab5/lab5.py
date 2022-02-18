@@ -2,7 +2,7 @@
 Name: Zachary Sika
 lab5.py
 
-Problem: user creates graphic entries from input
+Problem: user creates graphic entries from input and pulls entries from lists
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
@@ -76,12 +76,19 @@ def process_string():
     for length in word_entry:
         print(length)
     print(character_count)
-process-string()
+
 def process_list():
     pt = Point(5,10)
     values = [5, "hi", 2.5, "there", pt, "7.2"]
+    x = values[1] + values[3]
+    print(x)
 
-
+    print(x)
+    x = values[1] * 5
+    print(x)
+    x = len(values)
+    print(x)
+process_list()
 
 def another_series():
     terms = [2,4,6]
