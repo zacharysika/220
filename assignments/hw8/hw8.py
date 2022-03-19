@@ -11,7 +11,7 @@ I certify that this assignment is entirely my own work.
 from graphics import *
 import math
 def add_ten(nums):
-    nums = [2,20,30,15]
+    nums = [50,54,-1,53,-70]
     for index in range(len(nums)):
         nums[index] = int(nums[index]) + 10
 
@@ -22,14 +22,10 @@ def square_each(nums):
 def sum_list(nums):
     return sum(nums)
 
-def to_numbers():
-    nums = [2, 20, 30, 15]
+def to_numbers(nums):
     for i in nums:
         "".join(str(i))
     num_list = int(i)
-    print(num_list)
-
-to_numbers()
 def sum_of_squares(nums):
     pass
 
