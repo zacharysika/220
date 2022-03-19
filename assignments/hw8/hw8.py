@@ -10,67 +10,54 @@ I certify that this assignment is entirely my own work.
 
 from graphics import *
 import math
-def add_ten():
-    nums = input("Please enter numbers")
-    nums_list = nums.split()
-    for index in range(len(nums_list)):
-        nums_list[index] = int(nums_list[index]) + 10
+def add_ten(nums):
+    nums = [2,20,30,15]
+    for index in range(len(nums)):
+        nums[index] = int(nums[index]) + 10
 
-def square_each():
-    list_items = []
-    number_amount = int(input("How many numbers are there?"))
-    for i in range(number_amount):
-        nums = input("Please enter number:")
-        list_items.append(int(nums) ** 2)
-    print(list_items)
+def square_each(nums):
+    for index in range(len(nums)):
+        nums[index] = int(nums[index]) ** 2
 
-def sum_list():
-    list_items = []
-    number_amount = int(input("How many numbers are there?"))
-    for i in range(number_amount):
-        numbers = int(input("Enter Number:"))
-        list_items.append(numbers)
-    print(sum(list_items))
+def sum_list(nums):
+    return sum(nums)
 
-def to_numbers(nums):
-    pass
+def to_numbers():
+    nums = [2, 20, 30, 15]
+    for i in nums:
+        "".join(str(i))
+    num_list = int(i)
+    print(num_list)
 
-
+to_numbers()
 def sum_of_squares(nums):
     pass
 
 
-def starter():
-    wins = int(input("How many times has this player won?"))
-    weight = int(input("How much does this player weigh?"))
-    if (weight >= 150 and weight < 160 and wins <= 5):
-        print("They are at the starter position")
-        starter = True
-    elif (weight>199 or wins>20):
-        print("They are at the starter position")
-        starter = True
+def starter(weight,wins):
+    if (weight >= 150 and weight < 160 and wins >= 5):
+        return True
+    elif (weight > 199 or wins > 20):
+        return True
     else:
-        print("They are not at the starter position")
-        starter = False
-    print(starter)
-def leap_year():
-    year = int(input("Enter Year:"))
+        return False
+def leap_year(year):
     if year % 4 != 0:
-        print("not a leap year")
+        return False
     elif year % 100 != 0:
-        print("leap year")
+        return True
     elif year % 400 != 0:
-        print("not a leap year")
+        return False
     else:
-        print("leap year")
-def circle_overlap(circle_one,circle_two,distance,radius_sum):
+        return True
+def circle_overlap():
     width_px = 700
     height_px = 700
     win = GraphWin("Circle", width_px, height_px)
     width = 10
     height = 10
     win.setCoords(0, 0, width, height)
-    text_alert = Text(Point(5,5), "Click twice to draw circles")
+    text_alert = Text(Point(5, 5), "Click twice to draw circles")
     text_alert.draw(win)
     center = win.getMouse()
     circumference_point = win.getMouse()
@@ -86,22 +73,13 @@ def circle_overlap(circle_one,circle_two,distance,radius_sum):
     circle_two = Circle(center2, radius2)
     circle_two.setFill("green")
     circle_two.draw(win)
-    distance = math.sqrt((center.getX() - center2.getX()) ** 2 + (center.getY() - center2.getY()) ** 2)
+
+def did_overlap(circle_one, circle_two):
+    distance = math.sqrt((circle_one.getCenter().getX() - circle_two.getCenter().getX()) ** 2 + (circle_one.getCenter().getY() - circle_two.getCenter().getY()) ** 2)
+    radius_sum = circle_one.getRadius() + circle_two.getRadius()
     if (distance < radius_sum):
-        return True
-    else:
         return False
-    win.getMouse()
-    win.close()
-def did_overlap(circle_one, circle_two,distance,radius_sum):
-
-
- #if __name__ == '__main__':
-        ## add_ten()
-        ## square_each()
-        ## sum_list()
-        ## to_numbers(nums)
-        ## sum_of_squares(nums)
-        ## starter()
-        ## leap_year()
-        ## circle_overlap(circle_one, circle_two)
+    else:
+        return True
+if __name__ == '__main__':
+    pass
